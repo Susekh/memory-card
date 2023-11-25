@@ -1,0 +1,37 @@
+.header-text{
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+  color: #e11d48;
+}
+.header-text-secondColor{
+  color: #2563eb;
+}
+
+.score-board{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.score-board > div{
+  padding: 0.01rem 3rem;
+  border-radius: 10px;
+}
+
+.current-score{
+  background-color: #2563eb;
+  color: white;
+}
+.highest-score{
+  background-color: #e11d48;
+  color: white;
+}
+
+
+
+.cards-container{
+  display: flex;
+  gap :2rem;
+}
