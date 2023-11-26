@@ -1,7 +1,7 @@
 # memory-card
 The main goal of this project is to implement the concepts learned so far by using hooks to manage and utilize state while fetching and using data from an external API.
 
-![Alt text](Screenshot_20231126_045115.png)
+![Alt text](./public/images/Screenshot_20231126_045115.png)
 
 
 Instructions:
