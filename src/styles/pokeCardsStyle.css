@@ -1,5 +1,14 @@
 .cards{
-    background-color: rgba(255, 255, 255, 0.781);
-    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.655);
+    padding: 3rem;
+    border-radius: 10px;
+    cursor:pointer;
+    
+    animation-name: card-animation;
+    animation-duration: 0.5s;
 }
 
+@keyframes card-animation{
+    from{transform: scaleY(0);}
+    to{transform: scaleY(1);}
+}

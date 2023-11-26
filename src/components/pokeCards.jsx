@@ -7,7 +7,11 @@ import Tilt from 'react-parallax-tilt';
 function PokeCards(props){
     const pokeName = props.pokeName;
     const [pokeData, setPokeData] = useState(null);
+    const handleClick = props.handleClick;
+    
 
+
+    
     useEffect(() => {
       async function fetchData() {
         try {
@@ -26,23 +30,27 @@ function PokeCards(props){
 
 
 
+
     return (
       <>
         {pokeData ? (
-          <Tilt glareEnable = {true}>
-            <div className="cards">
-              <div className="poke-pic-div">
-                {/* Display the Pokemon image */}
-                <img src={pokeData.sprites.front_default} alt={`${pokeName} sprite`} />
+          <div id={pokeName} onClick={handleClick}>
+            <Tilt glareEnable = {true} glareMaxOpacity = {0.5} glareColor = {'#e11d4755'} glarePosition = {'all'} glareBorderRadius = {'10px'}>
+              <div   className="cards">
+                <div className="poke-pic-div" >
+                  {/* Display the Pokemon image */}
+                  <img src={pokeData.sprites.front_default} alt={`${pokeName} sprite`} />
+                </div>
+                <div className="card-content">
+                  <h4>{pokeName.toUpperCase()}</h4>
+                  {/* Display other information about the Pokemon */}
+                  <p>Height: {pokeData.height}</p>
+                  <p>Weight: {pokeData.weight/10}kg</p>
+                </div>
               </div>
-              <div className="card-content">
-                <h4>{pokeName}</h4>
-                {/* Display other information about the Pokemon */}
-                <p>Height: {pokeData.height}</p>
-                <p>Weight: {pokeData.weight/10}kg</p>
-              </div>
-            </div>
-          </Tilt>
+            </Tilt>
+          </div>
+          
           
         ) : (
           <p>Loading...</p>
