@@ -2,7 +2,7 @@ import PokeCards from "./pokeCards";
 import '../styles/gamePartStyle.css'
 import { useState } from "react";
 
-
+// array which keeps the count of hits for every cards
 let hitCounts = [-1, -1, -1, -1, -1];
 
 
@@ -25,7 +25,12 @@ function GamePart(){
       };
 
 
-   
+    //   state array to keep randomized value of pokeArry to trigger randomization of cards after clicking a card 
+
+      let [randomArry, setRandomArry] = useState(shuffleArray(pokeArry));
+
+
+//    function increments hits and checks wheather game is over or not
     
 
     const handleClick = event => {
@@ -84,9 +89,9 @@ function GamePart(){
     }
     
 
+// function to initiate the game again after game getting over
 
-
-    function makeGameOver(){
+    function handlePlayAgain(){
         setGameOver(false);
         hitCounts.forEach((_,index, array) => {
             array[index] = -1;
@@ -94,7 +99,7 @@ function GamePart(){
         
     }
 
-    let [randomArry, setRandomArry] = useState(shuffleArray(pokeArry));
+    
 
     
 
@@ -117,7 +122,7 @@ function GamePart(){
                 <div className="game-over-overLay">
                     <div className="game-over-div">
                         <h1>GAME OVER!</h1>
-                        <button onClick={makeGameOver}>Play Again</button>
+                        <button onClick={handlePlayAgain}>Play Again</button>
                     </div>
                 </div>
                 

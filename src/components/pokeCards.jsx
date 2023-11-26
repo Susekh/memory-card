@@ -11,7 +11,7 @@ function PokeCards(props){
     
 
 
-    
+    // Fetching datas for cards (image, weight , height)
     useEffect(() => {
       async function fetchData() {
         try {
