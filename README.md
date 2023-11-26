@@ -14,3 +14,5 @@ Instructions:
 *If you click on the same card twice, the game will conclude.
 *Challenge yourself to see how many distinct cards you can uncover before the game ends.
 
+
+[Play Now!](https://memory-card-cgndjoddn-subhranshu-sekhar-khilars-projects.vercel.app/)
